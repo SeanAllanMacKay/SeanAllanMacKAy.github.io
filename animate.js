@@ -42,19 +42,73 @@ window.addEventListener('load', ()=>{
 		drawerOpen = true
 	})
 
+	let pages = Array.from(document.getElementsByClassName('page'))
+
+	let headerTitle = document.getElementById('header-title')
+
+	let profile = document.getElementById('profile')
+
+	let portfolio = document.getElementById('portfolio')
+
+	let resume = document.getElementById('resume')
+
+	let contact = document.getElementById('contact')
+
+	headerTitle.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		})
+	})
+
+	profile.addEventListener('click', () => {
+		window.scrollTo({
+			top: pages[0].offsetTop,
+			left: 0,
+			behavior: 'smooth'
+		})
+	})
+
+	portfolio.addEventListener('click', () => {
+		window.scrollTo({
+			top: pages[1].offsetTop,
+			left: 0,
+			behavior: 'smooth'
+		})
+	})
+
+	resume.addEventListener('click', () => {
+		window.scrollTo({
+			top: pages[2].offsetTop,
+			left: 0,
+			behavior: 'smooth'
+		})
+	})
+
+	contact.addEventListener('click', () => {
+		window.scrollTo({
+			top: pages[3].offsetTop,
+			left: 0,
+			behavior: 'smooth'
+		})
+	})
+
 	window.addEventListener('scroll', function() {
 
-		let content = document.getElementById('content')
+		let title = document.getElementById('title-container')
+
+		let images = Array.from(document.getElementsByClassName('parallax'))
 
 		let header = document.getElementById('header')
 
-		if(pageYOffset >= content.offsetTop){
-			header.setAttribute('style', 'color: black')
-		}
-		else{
-			header.setAttribute('style', 'color: white')
-		}
-		
+		header.setAttribute('style', 'color: white')
+
+		pages.map(page => {
+			if(pageYOffset >= page.offsetTop - 20 && pageYOffset <= (page.offsetTop + page.offsetHeight) - 20){
+				header.setAttribute('style', 'color: black')
+			}
+		})
 	});
 	
 })
