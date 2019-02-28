@@ -65,6 +65,19 @@ window.addEventListener('load', ()=>{
 	})
 
 	profile.addEventListener('click', () => {
+		if(drawerOpen == true){
+			var pos = 0;
+			var id = setInterval(()=>{
+				if (pos == -200) {
+					clearInterval(id);
+				} else {
+					pos -= 2; 
+					drawer.style.right = pos + 'px';
+				}
+			}, 0.1);
+
+			drawerOpen = false
+		}
 		window.scrollTo({
 			top: pages[0].offsetTop,
 			left: 0,
@@ -73,6 +86,19 @@ window.addEventListener('load', ()=>{
 	})
 
 	portfolio.addEventListener('click', () => {
+		if(drawerOpen == true){
+			var pos = 0;
+			var id = setInterval(()=>{
+				if (pos == -200) {
+					clearInterval(id);
+				} else {
+					pos -= 2; 
+					drawer.style.right = pos + 'px';
+				}
+			}, 0.1);
+
+			drawerOpen = false
+		}
 		window.scrollTo({
 			top: pages[1].offsetTop,
 			left: 0,
@@ -81,6 +107,19 @@ window.addEventListener('load', ()=>{
 	})
 
 	resume.addEventListener('click', () => {
+		if(drawerOpen == true){
+			var pos = 0;
+			var id = setInterval(()=>{
+				if (pos == -200) {
+					clearInterval(id);
+				} else {
+					pos -= 2; 
+					drawer.style.right = pos + 'px';
+				}
+			}, 0.1);
+
+			drawerOpen = false
+		}
 		window.scrollTo({
 			top: pages[2].offsetTop,
 			left: 0,
@@ -89,6 +128,19 @@ window.addEventListener('load', ()=>{
 	})
 
 	contact.addEventListener('click', () => {
+		if(drawerOpen == true){
+			var pos = 0;
+			var id = setInterval(()=>{
+				if (pos == -200) {
+					clearInterval(id);
+				} else {
+					pos -= 2; 
+					drawer.style.right = pos + 'px';
+				}
+			}, 0.1);
+
+			drawerOpen = false
+		}
 		window.scrollTo({
 			top: pages[3].offsetTop,
 			left: 0,

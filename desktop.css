@@ -24,6 +24,7 @@ h3{
 p{
 	font-family: 'Roboto', sans-serif;
 	flex: 1;
+	overflow: auto;
 }
 
 #header{
@@ -126,6 +127,7 @@ p{
 .page{
 	width: 100%;
 	height: 100vh;
+	min-height: 700px;
 }
 
 .subtitle{
@@ -138,13 +140,37 @@ p{
 	display: flex;
 	flex-direction: row;
 	padding: 30px;
+	min-height: 500px;
 }
 
 #profile-image{
 	flex: 1;
 	margin-left: 30px;
-	min-height: 500px;
 	background-image: url('./images/about.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#resume-content{
+	display: flex;
+	flex-direction: row;
+	padding: 30px;
+	min-height: 500px;
+}
+
+#resume-content > a{
+	flex: 1;
+	margin-right: 30px;
+	height: 75vh;
+	min-height: 500;
+}
+
+
+#resume-image{
+	width: 100%;
+	height: 100%;	
+	background-image: url('./images/resume.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
