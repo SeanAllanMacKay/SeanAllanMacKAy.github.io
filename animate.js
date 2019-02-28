@@ -54,6 +54,8 @@ window.addEventListener('load', ()=>{
 
 	let contact = document.getElementById('contact')
 
+	let arrow = document.getElementById('arrow')
+
 	headerTitle.addEventListener('click', () => {
 		window.scrollTo({
 			top: 0,
@@ -102,11 +104,15 @@ window.addEventListener('load', ()=>{
 
 		let header = document.getElementById('header')
 
+		let profileImage = document.getElementById('profile-image')
+
 		header.setAttribute('style', 'color: white')
 
-		pages.map(page => {
+		pages.map((page) => {
 			if(pageYOffset >= page.offsetTop - 20 && pageYOffset <= (page.offsetTop + page.offsetHeight) - 20){
-				header.setAttribute('style', 'color: black')
+	
+				header.setAttribute('style', 'color: black; background-color: white')
+				
 			}
 		})
 	});
