@@ -1,5 +1,9 @@
 window.addEventListener('load', ()=>{
 
+	let gif = document.getElementById('profile-image')
+
+	gif.style.backgroundImage = `url("./images/about.gif?${Math.random()}")`
+
 	let drawerOpen = false
 
 	let openDrawer = document.getElementById('open-drawer')
