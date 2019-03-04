@@ -1,0 +1,74 @@
+/*
+	Small - Tablets, large phones
+*/
+@media (min-width: 600px){
+
+	ol{
+		padding-left: 60px;
+	}
+
+	.content{
+		padding: 0 50px 50px 50px;
+	}
+
+	#header-title{
+		color: white;
+		font-size: 2em;
+	}
+
+	#open-drawer{
+		font-size: 2em;
+	}
+
+	#drawer{
+		position: fixed;
+		right: -250px;
+		width: 250px;
+		height: 100vh;
+	}
+
+	.nav{
+		width: 100%;
+		height: 125px;
+		font-size: 1.75em;
+	}
+
+	#title{
+		font-size: 5.5em;
+		top: 180px;
+	}
+
+	.subtitle{
+		font-size: 2.25em;
+	}
+
+	#profile-content{
+		font-size: 1.75em;
+	}
+
+	.game-subtitle{
+		font-size: 1.75em;
+	}
+
+	.game-subtitle-2{
+		font-size: 2.5em;
+	}
+
+	#game-overview{
+		font-size: 1.5em;
+		margin: 0 0 60px 0;
+	}
+
+	.step{
+		font-size: 2.5em;
+	}
+
+	.game-description{
+		margin: 30px 0;
+	}
+
+	#resume-description{
+		padding: 0 50px;
+		font-size: 1.5em;
+	}
+}

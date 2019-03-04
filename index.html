@@ -4,11 +4,13 @@
 
 	<title>Sean MacKay - Web Developer</title>
 
-	<meta charset = 'UTF-8' />
+	<meta charset = 'UTF-8' name="viewport" content="width=device-width,initial-scale=1.0"/>
 
 	<link rel='stylesheet' type='text/css' href='desktop.css'>
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300|Roboto:300" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='medium.css'>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,600|Roboto:300,500" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
@@ -22,11 +24,9 @@
 
 		<button class='nav' id='profile'>PROFILE</button>
 
-		<button class='nav' id='portfolio'>PORTFOLIO</button>
+		<button class='nav' id='portfolio'>CURRENT PROJECT</button>
 
 		<button class='nav' id='resume'>RESUME</button>
-
-		<button class='nav' id='contact'>CONTACT</button>
 
 	</div>
 
@@ -50,7 +50,7 @@
 
 		<div id='content'>
 
-			<div class='page' id='profile'>
+			<div class='page' id='profile-page'>
 				
 				<div class='subtitle'>
 
@@ -60,9 +60,9 @@
 
 				<div class='content'>
 
-					<p>
+					<p id='profile-content'>
 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas integer. Turpis massa sed elementum tempus egestas. Ante in nibh mauris cursus. Cursus metus aliquam eleifend mi in. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Eget arcu dictum varius duis at. Vestibulum lectus mauris ultrices eros in. Elit scelerisque mauris pellentesque pulvinar pellentesque. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Rhoncus est pellentesque elit ullamcorper. Consectetur purus ut faucibus pulvinar. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in. Nulla posuere sollicitudin aliquam ultrices sagittis. Nec dui nunc mattis enim ut tellus elementum sagittis. Non tellus orci ac auctor augue mauris augue. Fermentum iaculis eu non diam.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas integer. Turpis massa sed elementum tempus egestas. Ante in nibh mauris cursus. Cursus metus aliquam eleifend mi in. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Eget arcu dictum varius duis at. Vestibulum lectus mauris ultrices eros in. Elit scelerisque mauris pellentesque pulvinar pellentesque. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. 
 
 					</p>
 
@@ -84,9 +84,38 @@
 					
 				</div>
 
-				<div class='content'>
+				<div class='content' id='project-content'>
+
+					<h4 class='game-subtitle'>OVERVIEW</h4>
+
+					<p id='game-overview'>
+
+						Repartease is a simple party game to see how depraved your friends are. It's still a work in progress, so it'll be buggy. It's built on a Node.js Express / MongoDB / React stack.
+						<br>
+						<br>
+						<span class='bold'>Live Game:</span> <a href='https://repartease.herokuapp.com' target="_blank">repartease.herokuapp.com.</a>
+
+					</p>
+
+					<h4 class='game-subtitle'>GAMEPLAY</h4>
 					
-					<div id='start-game'>
+					<div class='game'>
+
+						<div class='game-description'>
+
+							<h4 class='game-subtitle-2'>Starting a Game</h4>
+
+							<ol>
+
+								<li class='step'>Type your name in and click "Start Game"</li>
+
+								<li class='step'>Copy the Game Code and give it to your friends (or enter it in the 2nd window below)</li>
+
+								<li class='step'>Once everyone has joined, hit "All In" and you're ready to play</li>
+
+							</ol>
+
+						</div>
 
 						<div id='iframe-container'>
 
@@ -96,7 +125,23 @@
 
 					</div>
 
-					<div id='join-game'>
+					<div class='game'>
+
+						<div class='game-description'>
+
+							<h4 class='game-subtitle-2'>Joining a Game</h4>
+
+							<ol>
+
+								<li class='step'>Click the "Join New Game" button</li>
+
+								<li class='step'>Enter your name and GameCode (get that from whoever started the game)</li>
+
+								<li class='step'>Wait for the person who started the game to press the "All In" button and get ready to play</li>
+
+							</ol>
+
+						</div>
 
 						<div id='iframe-container'>
 
@@ -120,7 +165,11 @@
 					
 				</div>
 
-				<div class='content'>
+				<div class='content' id='resume-content'>
+
+					<p id='resume-description'>
+						<span class='bold'>Github:</span> <a href='https://github.com/SeanAllanMacKay' target="_blank">https://github.com/SeanAllanMacKay</a>
+					</p>
 
 					<a href='./downloads/Sean_MacKay_Resume.pdf' target="_blank">
 
@@ -130,34 +179,9 @@
 
 					</a>
 
-					<p>
-
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas integer. Turpis massa sed elementum tempus egestas. Ante in nibh mauris cursus. Cursus metus aliquam eleifend mi in. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Eget arcu dictum varius duis at. Vestibulum lectus mauris ultrices eros in. Elit scelerisque mauris pellentesque pulvinar pellentesque. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Rhoncus est pellentesque elit ullamcorper. Consectetur purus ut faucibus pulvinar. Habitasse platea dictumst quisque sagittis purus sit. Mauris augue neque gravida in. Nulla posuere sollicitudin aliquam ultrices sagittis. Nec dui nunc mattis enim ut tellus elementum sagittis. Non tellus orci ac auctor augue mauris augue. Fermentum iaculis eu non diam.
-
-					</p>
-
 				</div>
 
 			</div>
-
-			<div class='parallax' id='third'></div>
-
-			<div class='page' id='contact'>
-
-				<div class='subtitle'>
-
-					<h3>CONTACT</h3>
-					
-				</div>
-
-				<div id='contact-content' >
-
-
-
-				</div>
-
-			</div>
-
 		</div>
 
 	</div>

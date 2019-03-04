@@ -17,10 +17,10 @@ window.addEventListener('load', ()=>{
 		if(drawerOpen == true){
 			var pos = 0;
 			var id = setInterval(()=>{
-				if (pos == -200) {
+				if (pos == -600) {
 					clearInterval(id);
 				} else {
-					pos -= 2; 
+					pos -= 4; 
 					drawer.style.right = pos + 'px';
 				}
 			}, 0.1);
@@ -33,12 +33,12 @@ window.addEventListener('load', ()=>{
 	openDrawer.addEventListener('click', () => {
 
 		if(drawerOpen == false){
-			var pos = -200;
+			var pos = -600;
 			var id = setInterval(()=>{
 				if (pos == 0) {
 					clearInterval(id);
 				} else {
-					pos += 2; 
+					pos += 4; 
 					drawer.style.right = pos + 'px';
 				}
 			}, 0.1);
@@ -56,8 +56,6 @@ window.addEventListener('load', ()=>{
 
 	let resume = document.getElementById('resume')
 
-	let contact = document.getElementById('contact')
-
 	let arrow = document.getElementById('arrow')
 
 	headerTitle.addEventListener('click', () => {
@@ -72,10 +70,10 @@ window.addEventListener('load', ()=>{
 		if(drawerOpen == true){
 			var pos = 0;
 			var id = setInterval(()=>{
-				if (pos == -200) {
+				if (pos == -600) {
 					clearInterval(id);
 				} else {
-					pos -= 2; 
+					pos -= 4; 
 					drawer.style.right = pos + 'px';
 				}
 			}, 0.1);
@@ -93,10 +91,10 @@ window.addEventListener('load', ()=>{
 		if(drawerOpen == true){
 			var pos = 0;
 			var id = setInterval(()=>{
-				if (pos == -200) {
+				if (pos == -600) {
 					clearInterval(id);
 				} else {
-					pos -= 2; 
+					pos -= 4; 
 					drawer.style.right = pos + 'px';
 				}
 			}, 0.1);
@@ -114,10 +112,10 @@ window.addEventListener('load', ()=>{
 		if(drawerOpen == true){
 			var pos = 0;
 			var id = setInterval(()=>{
-				if (pos == -200) {
+				if (pos == -600) {
 					clearInterval(id);
 				} else {
-					pos -= 2; 
+					pos -= 4; 
 					drawer.style.right = pos + 'px';
 				}
 			}, 0.1);
@@ -126,27 +124,6 @@ window.addEventListener('load', ()=>{
 		}
 		window.scrollTo({
 			top: pages[2].offsetTop,
-			left: 0,
-			behavior: 'smooth'
-		})
-	})
-
-	contact.addEventListener('click', () => {
-		if(drawerOpen == true){
-			var pos = 0;
-			var id = setInterval(()=>{
-				if (pos == -200) {
-					clearInterval(id);
-				} else {
-					pos -= 2; 
-					drawer.style.right = pos + 'px';
-				}
-			}, 0.1);
-
-			drawerOpen = false
-		}
-		window.scrollTo({
-			top: pages[3].offsetTop,
 			left: 0,
 			behavior: 'smooth'
 		})
