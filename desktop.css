@@ -23,7 +23,7 @@ iframe{
 	align-self: center;
 	border: none;
 	width: 100%;
-	height: 100%;
+	min-height: 580px;
 	overflow: scroll;
 }
 
@@ -55,6 +55,10 @@ li{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.3em;
 	margin: 0;
+}
+
+.link{
+	cursor: pointer;
 }
 
 #open-drawer{
@@ -143,7 +147,7 @@ li{
 
 .page{
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	min-height: 720px;
 }
 
@@ -169,6 +173,7 @@ li{
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	background-attachment: fixed;
 }
 
 #profile-content{
@@ -193,7 +198,7 @@ li{
 
 .game{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin-bottom: 10px;
 }
 
@@ -214,7 +219,7 @@ li{
 .game-description{
 	flex: 1;
 	font-size: 0.5em;
-	margin-right: 30px;
+	margin: 0 30px 30px 0;
 }
 
 #game-overview{
@@ -231,9 +236,12 @@ li{
 #iframe-container{
 	flex: 1;
 	position: relative;
-	height: 40vh;
-	margin-bottom: 10px;
-	display: none;
+	width: 100vw;
+	margin: 0 0 10px 0;
+	overflow: scroll;
+	min-width: 320px;
+	align-self: center;
+	max-width: 450px;
 }
 
 #resume-content{
@@ -283,10 +291,6 @@ li{
 		top: 100px;
 	}
 
-	.parallax{
-		background-attachment: fixed;
-	}
-
 	.content{
 		flex-direction: row;
 	}
@@ -314,6 +318,92 @@ li{
 		background-size: cover;
 		position: relative;
 		z-index: -1;
+	}
+
+	ol{
+		padding-left: 60px;
+	}
+
+	.content{
+		padding: 0 50px 50px 50px;
+	}
+
+	#header-title{
+		font-size: 2em;
+	}
+
+	#open-drawer{
+		font-size: 2em;
+	}
+
+	#drawer{
+		position: fixed;
+		right: -250px;
+		width: 250px;
+		height: 100vh;
+	}
+
+	.nav{
+		width: 100%;
+		height: 125px;
+		font-size: 1.75em;
+	}
+
+	#title{
+		font-size: 5.5em;
+		top: 180px;
+	}
+
+	.subtitle{
+		font-size: 2.25em;
+	}
+
+	#profile-content{
+		font-size: 1.75em;
+		padding-top: 100px;
+	}
+
+	.game{
+		flex-direction: row;
+	}
+
+	.game-subtitle{
+		font-size: 1.75em;
+	}
+
+	.game-subtitle-2{
+		font-size: 2.5em;
+	}
+
+	#game-overview{
+		font-size: 1.5em;
+		margin: 0 0 60px 0;
+	}
+
+	.step{
+		font-size: 2.5em;
+	}
+
+	#iframe-container{
+		max-width: 450px;
+	}
+
+	#resume-description{
+		padding: 0 50px;
+		font-size: 1.5em;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	#resume-container{
+		flex: 2;
+		height: 60vw;
+	}
+
+	#resume-image{
+		width: 100%;
+		height: 100%;
 	}
 }
 

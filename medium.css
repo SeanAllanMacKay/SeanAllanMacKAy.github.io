@@ -7,17 +7,20 @@
 		padding-left: 60px;
 	}
 
+	iframe{
+		min-height: 650px;
+	}
+
 	.content{
 		padding: 0 50px 50px 50px;
 	}
 
 	#header-title{
-		color: white;
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	#open-drawer{
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	#drawer{
@@ -43,7 +46,11 @@
 	}
 
 	#profile-content{
-		font-size: 1.75em;
+		font-size: 1.25em;
+	}
+
+	#profile-image{
+		min-height: 35vw;
 	}
 
 	.game-subtitle{
@@ -55,12 +62,21 @@
 	}
 
 	#game-overview{
-		font-size: 1.5em;
+		font-size: 1.25em;
 		margin: 0 0 60px 0;
 	}
 
+	#iframe-container{
+		max-width: 450px;
+	}
+
+	.game-description{
+		margin: 0;
+
+	}
+
 	.step{
-		font-size: 2.5em;
+		font-size: 2.25em;
 	}
 
 	.game-description{
@@ -69,6 +85,6 @@
 
 	#resume-description{
 		padding: 0 50px;
-		font-size: 1.5em;
+		font-size: 1.25em;
 	}
 }

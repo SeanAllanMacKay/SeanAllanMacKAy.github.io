@@ -46,6 +46,32 @@ window.addEventListener('load', ()=>{
 		drawerOpen = true
 	})
 
+	let autoScroll = 30
+
+	let offset = 50
+
+	let tablet = window.matchMedia("(min-width: 600px)")
+
+	let bigTablet = window.matchMedia("(min-width: 900px)")
+
+	let desktop = window.matchMedia("(min-width: 1200px)")
+
+	let highRes = window.matchMedia("(min-width: 1800px)")
+
+	if(tablet.matches) {
+		autoscroll = 55
+		offset = 70
+		console.log('tablet')
+	} else if(bigTablet.matches) {
+		console.log('big tablet')
+	} else if(desktop.matches) {
+		console.log('desktop')
+	} else if(highRes.matches) {
+		console.log('highRes')
+	} else {
+		console.log('mobile')
+	}
+
 	let pages = Array.from(document.getElementsByClassName('page'))
 
 	let headerTitle = document.getElementById('header-title')
@@ -58,6 +84,36 @@ window.addEventListener('load', ()=>{
 
 	let arrow = document.getElementById('arrow')
 
+	let currentLink = document.getElementById('current-project-link')
+
+	let resumeLink = document.getElementById('resume-link')
+
+	let scroll = (page, siderLink) => {
+
+		if(siderLink){
+			if(drawerOpen == true){
+				var pos = 0;
+				var id = setInterval(()=>{
+					if (pos == -600) {
+						clearInterval(id);
+					} else {
+						pos -= 4; 
+						drawer.style.right = pos + 'px';
+					}
+				}, 0.1);
+
+				drawerOpen = false
+			}
+		}
+
+		window.scrollTo({
+			top: pages[page].offsetTop - offset,
+			left: 0,
+			behavior: 'smooth'
+		})
+
+	}
+
 	headerTitle.addEventListener('click', () => {
 		window.scrollTo({
 			top: 0,
@@ -67,66 +123,23 @@ window.addEventListener('load', ()=>{
 	})
 
 	profile.addEventListener('click', () => {
-		if(drawerOpen == true){
-			var pos = 0;
-			var id = setInterval(()=>{
-				if (pos == -600) {
-					clearInterval(id);
-				} else {
-					pos -= 4; 
-					drawer.style.right = pos + 'px';
-				}
-			}, 0.1);
-
-			drawerOpen = false
-		}
-		window.scrollTo({
-			top: pages[0].offsetTop,
-			left: 0,
-			behavior: 'smooth'
-		})
+		scroll(0, true)
 	})
 
 	portfolio.addEventListener('click', () => {
-		if(drawerOpen == true){
-			var pos = 0;
-			var id = setInterval(()=>{
-				if (pos == -600) {
-					clearInterval(id);
-				} else {
-					pos -= 4; 
-					drawer.style.right = pos + 'px';
-				}
-			}, 0.1);
-
-			drawerOpen = false
-		}
-		window.scrollTo({
-			top: pages[1].offsetTop,
-			left: 0,
-			behavior: 'smooth'
-		})
+		scroll(1, true)
 	})
 
 	resume.addEventListener('click', () => {
-		if(drawerOpen == true){
-			var pos = 0;
-			var id = setInterval(()=>{
-				if (pos == -600) {
-					clearInterval(id);
-				} else {
-					pos -= 4; 
-					drawer.style.right = pos + 'px';
-				}
-			}, 0.1);
+		scroll(2, true)
+	})
 
-			drawerOpen = false
-		}
-		window.scrollTo({
-			top: pages[2].offsetTop,
-			left: 0,
-			behavior: 'smooth'
-		})
+	currentLink.addEventListener('click', () => {
+		scroll(1, false)
+	})
+
+	resumeLink.addEventListener('click', () => {
+		scroll(2, false)
 	})
 
 	window.addEventListener('scroll', function() {
@@ -142,7 +155,7 @@ window.addEventListener('load', ()=>{
 		header.setAttribute('style', 'color: white')
 
 		pages.map((page) => {
-			if(pageYOffset >= page.offsetTop - 20 && pageYOffset <= (page.offsetTop + page.offsetHeight) - 20){
+			if(pageYOffset >= page.offsetTop - autoScroll && pageYOffset <= (page.offsetTop + page.offsetHeight) - autoScroll){
 	
 				header.setAttribute('style', 'color: black; background-color: white')
 				
