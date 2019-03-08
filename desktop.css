@@ -246,6 +246,7 @@ li{
 
 #resume-content{
 	padding: 0;
+	flex-direction: column;
 }
 
 .content > a{
@@ -254,6 +255,11 @@ li{
 	height: 75vh;
 	min-height: 500px;
 }
+
+#resume-container{
+		flex: 2;
+		height: 80vw;
+	}
 
 #resume-description{
 	padding: 0 35px;
@@ -275,148 +281,4 @@ li{
 
 #second{
 	background-image: url('./images/phone.jpg');
-}
-
-/*
-	Large - Landscape Tablets
-*/
-@media (min-width: 900px){
-
-	h3{
-		z-index: 2;
-	}
-
-	#title{
-		font-size: 6em;
-		top: 100px;
-	}
-
-	.content{
-		flex-direction: row;
-	}
-
-	#profile-content{
-		font-size: 0.75em;
-		order: 1;
-	}
-
-	#profile-image{
-		flex: 1;
-		height: 80vh;
-		order: 2;
-		margin: 0;
-	}
-
-	#title-container{
-		width: 100%;
-		height: 100vh;
-		min-height: 800px;
-		background-image: url('./images/splash-black.jpg');
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-		z-index: -1;
-	}
-
-	ol{
-		padding-left: 60px;
-	}
-
-	.content{
-		padding: 0 50px 50px 50px;
-	}
-
-	#header-title{
-		font-size: 2em;
-	}
-
-	#open-drawer{
-		font-size: 2em;
-	}
-
-	#drawer{
-		position: fixed;
-		right: -250px;
-		width: 250px;
-		height: 100vh;
-	}
-
-	.nav{
-		width: 100%;
-		height: 125px;
-		font-size: 1.75em;
-	}
-
-	#title{
-		font-size: 5.5em;
-		top: 180px;
-	}
-
-	.subtitle{
-		font-size: 2.25em;
-	}
-
-	#profile-content{
-		font-size: 1.75em;
-		padding-top: 100px;
-	}
-
-	.game{
-		flex-direction: row;
-	}
-
-	.game-subtitle{
-		font-size: 1.75em;
-	}
-
-	.game-subtitle-2{
-		font-size: 2.5em;
-	}
-
-	#game-overview{
-		font-size: 1.5em;
-		margin: 0 0 60px 0;
-	}
-
-	.step{
-		font-size: 2.5em;
-	}
-
-	#iframe-container{
-		max-width: 450px;
-	}
-
-	#resume-description{
-		padding: 0 50px;
-		font-size: 1.5em;
-		overflow-wrap: break-word;
-		word-wrap: break-word;
-		hyphens: auto;
-	}
-
-	#resume-container{
-		flex: 2;
-		height: 60vw;
-	}
-
-	#resume-image{
-		width: 100%;
-		height: 100%;
-	}
-}
-
-/*
-	Desktop
-*/
-@media (min-width: 1200px){
-	
-}
-
-/*
-	Extra Large - High res
-*/
-@media (min-width: 1800px){
-	
 }
